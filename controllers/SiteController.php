@@ -123,4 +123,15 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionHello()
+    {
+        return $this->render('hello');
+    }
+
+
 }
