@@ -1,1 +1,4 @@
-<h1>Welcom to site Walte</h1>
+<h1>Welcom to site Walter</h1>
+<?= $name."kjhkjh"."<br>"; ?>
+<?php  echo "my name: ".  $name ."<br>"; ?>
+<?= $name ?>

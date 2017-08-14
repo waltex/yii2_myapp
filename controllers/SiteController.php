@@ -123,14 +123,30 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
     /**
-     * Displays about page.
+     * Displays hello page.
      *
      * @return string
      */
     public function actionHello()
     {
-        return $this->render('hello');
+      $name="Walter";
+        return $this->render('hello',array("name"=>$name));
+    }
+
+
+    public function actionUser()
+    {
+      //return $this->render('userForm');;
+
+        $model= new UserForm;
+        if($model->load(yii::$app->$request->post()) && $model-->validate()){
+
+        }else{
+           return $this->render('userForm',['model'=>$model]);
+        }
+
     }
 
 
