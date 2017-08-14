@@ -1,11 +1,20 @@
 <?php
-  use yii\yii\helpers\Html;
-  use yii\widgets\ActiveForm;
- ?>
 
 
-<?php $form=ActiveForm::begin(); ?>
-<?= $form->filed($model,'name'); ?>
-<?= $form->filed($model,'email'); ?>
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 
-<?= Html::submitButton('Submit',['class'=>'btn btn-success']); ?>
+?>
+
+<?php
+    if(Yii::$app->session->hasFlash('success'))
+    {
+        echo "<div class = 'alert alert-success'>".Yii::$app->session->getFlash('success')."</div>";
+    }
+?>
+
+<?php $form = ActiveForm::begin(); ?>
+<?= $form->field($model, 'name'); ?>
+<?= $form->field($model, 'email'); ?>
+
+<?= Html::submitButton('Submit', ['class'=>'btn btn-success']); ?>

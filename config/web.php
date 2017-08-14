@@ -1,7 +1,8 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
-$db = require(__DIR__ . '/db.php');
+//$db = require(__DIR__ . '/db.php');
+require(__DIR__ . '/db_all.php');
 
 $config = [
     'id' => 'basic',
@@ -39,6 +40,7 @@ $config = [
             ],
         ],
         'db' => $db,
+        'db_oci' => $db_oci,
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
