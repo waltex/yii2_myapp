@@ -1,4 +1,6 @@
 <?php
 echo 'kldkldjd';
 echo "làòklklkihjh dd";
-echo "4";
+
+
+echo 'akajjan';
