@@ -9,6 +9,6 @@
 foreach ($users as $user)
 {
     //echo $user->username."<br>";
-    echo $user['username'];
+    echo $user['name'];
 }
 ?>

@@ -17,7 +17,7 @@ class UsersController extends Controller
     {
         //$users = [1, 2, 3]; //Users::find()->all();
         //$users = Users::find()->all();
-        $connection = \Yii::$app->db_oci;
+        $connection = \Yii::$app->db;
         $model = $connection->createCommand('SELECT * FROM users');
         $users = $model->queryAll();
 

@@ -40,13 +40,15 @@ $config = [
             ],
         ],
         'db' => $db,
-        'db_oci' => $db_oci,
+        'db_mysql1' => $db_mysql1,
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
+        
     ],
     'params' => $params,
 ];

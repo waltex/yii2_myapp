@@ -8,8 +8,8 @@ $db= [
     'charset' => 'utf8',
 ];
 
-//test
-$db_oci= [
+
+$db_mysql1= [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=yii2basic',
     'username' => 'root',
