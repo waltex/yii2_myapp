@@ -18,7 +18,7 @@ class Test1Search extends Test1
     public function rules()
     {
         return [
-            [['campoa', 'id_test2'], 'integer'],
+            [['campoa', 'id_test2', 'campof'], 'integer'],
             [['campob', 'campod', 'campoe'], 'safe'],
         ];
     }
@@ -61,6 +61,7 @@ class Test1Search extends Test1
         $query->andFilterWhere([
             'campoa' => $this->campoa,
             'campoe' => $this->campoe,
+            'campof' => $this->campof,
             'id_test2' => $this->id_test2,
         ]);
 

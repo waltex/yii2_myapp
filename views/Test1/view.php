@@ -16,16 +16,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->campoa], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->campoa], [
+        <?=
+        Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->campoa], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
                 'method' => 'post',
-            ],
-        ]) ?>
+            ]
+        ])
+        ?>
     </p>
 
-    <?= DetailView::widget([
+    <?=
+    DetailView::widget([
         'model' => $model,
         'attributes' => [
             'campoa',
@@ -33,7 +36,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'campod',
             'campoe',
             'id_test2',
+            'campof',
         ],
-    ]) ?>
+    ])
+    ?>
 
 </div>

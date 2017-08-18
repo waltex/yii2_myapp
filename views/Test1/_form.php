@@ -24,12 +24,14 @@ use yii\helpers\ArrayHelper;
     <?= $form->field($model, 'campoe')->textInput() ?>
 
     <!--?= $form->field($model, 'id_test2')->textInput(['maxlength' => true]) ?-->
-    <?=
+    <=
     $form->field($model, 'id_test2')->textInput(['maxlength' => true])->dropdownList([
         1 => 'item 1',
         2 => 'item 2'
             ], ['prompt' => Yii::t('app', 'Select category')]);
-    ?>
+            >
+
+
 
     <!--?=
     //$result = app\models\crud1\Test2Crud::find()->asArray()->all();

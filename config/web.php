@@ -1,4 +1,7 @@
 <?php
+if (function_exists('xdebug_disable')) {
+    xdebug_disable();
+}
 
 $params = require(__DIR__ . '/params.php');
 //$db = require(__DIR__ . '/db.php');
