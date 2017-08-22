@@ -3,8 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-
-//use app\models\crud1\Test2;
+use app\models\crud1\Test2;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\crud1\Test1 */
@@ -24,26 +23,26 @@ use yii\helpers\ArrayHelper;
     <?= $form->field($model, 'campoe')->textInput() ?>
 
     <!--?= $form->field($model, 'id_test2')->textInput(['maxlength' => true]) ?-->
-    <?=
+    <!--?=
     $form->field($model, 'id_test2')->textInput(['maxlength' => true])->dropdownList([
         1 => 'item 1',
         2 => 'item 2'
             ], ['prompt' => Yii::t('app', 'Select category')]);
-            ?>
+            ?-->
 
 
 
-    <!--?=
-    //$result = app\models\crud1\Test2Crud::find()->asArray()->all();
-    //
+    <?=
+  
     //$users = [1, 2, 3]; //Users::find()->all();
     //$users = Users::find()->all();
     //$connection = \Yii::$app->db;
 //$model = $connection->createCommand('SELECT * FROM test2');
 //$result = $model->queryAll();
 //$items = ArrayHelper::map($result, 'id', 'nome');
-    //$form->field($model, 'id_test2')->textInput(['maxlength' => true])->dropdownList($items, ['prompt' => Yii::t('app', 'Select category')]);
-    ?-->
+
+    $form->field($model, 'id_test2')->textInput(['maxlength' => true])->dropdownList(ArrayHelper::map(Test2::find()->all(), 'id', 'nome'), ['prompt' => Yii::t('app', 'Select category')]);
+    ?>
 
 
 
