@@ -4,8 +4,8 @@ if (function_exists('xdebug_disable')) {
 }
 
 $params = require(__DIR__ . '/params.php');
-//$db = require(__DIR__ . '/db.php');
-require(__DIR__ . '/db_all.php');
+$db = require(__DIR__ . '/db.php');
+
 
 $config = [
     'id' => 'basic',
@@ -43,8 +43,13 @@ $config = [
             ],
         ],
         'db' => $db,
-        'db_mysql1' => $db_mysql1,
-
+        'db2' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,

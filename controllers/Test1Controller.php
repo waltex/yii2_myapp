@@ -4,10 +4,12 @@ namespace app\controllers;
 
 use Yii;
 use app\models\crud1\Test1;
+use app\models\crud1\Test2;
 use app\models\crud1\Test1Search;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 
 /**
  * Test1Controller implements the CRUD actions for Test1 model.
@@ -88,7 +90,7 @@ class Test1Controller extends Controller
             return $this->redirect(['view', 'id' => $model->campoa]);
         } else {
             return $this->render('update', [
-                'model' => $model,
+                'model' => $model
             ]);
         }
     }
