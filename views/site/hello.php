@@ -29,4 +29,5 @@ echo CHtml::button('Delete', array('submit' => array('user/delete', 'id' => $mod
     'class' => 'btn btn-large btn-danger',
     'style' => 'width:160px;'
 ));
+CHtml::Button('Upload', array('submit' => array(Dialog::message('Upload resume', $message))));
 ?>
