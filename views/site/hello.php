@@ -19,5 +19,7 @@ echo Alert::widget([
 echo Button::widget([
     'label' => 'Action',
     'options' => ['class' => 'btn-lg'],
-]);
+    'url' => Url::toRoute(['/controller/action'])
+   ]);
+ echo Html::a('label', ['/controller/action'], ['class' => 'btn btn-primary']);
 ?>
