@@ -18,7 +18,6 @@ echo Alert::widget([
 ]);
 
 echo Button::widget([
-    'autoIdPrefix' => 'bt',
     'label' => 'Action',
     'options' => ['class' => 'btn-lg'],
 ]);
