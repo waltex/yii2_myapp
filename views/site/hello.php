@@ -7,6 +7,7 @@
 
 use yii\bootstrap\Alert;
 use yii\bootstrap\Button;
+use yii\helpers\Html;
 
 echo Alert::widget([
     'options' => [
@@ -17,9 +18,9 @@ echo Alert::widget([
 ]);
 
 echo Button::widget([
+    'autoIdPrefix' => 'bt',
     'label' => 'Action',
     'options' => ['class' => 'btn-lg'],
-    'url' => Url::toRoute(['/controller/action'])
-   ]);
+]);
  echo Html::a('label', ['/controller/action'], ['class' => 'btn btn-primary']);
 ?>
