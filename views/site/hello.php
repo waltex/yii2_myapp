@@ -22,4 +22,11 @@ echo Button::widget([
     'options' => ['class' => 'btn-lg'],
 ]);
  echo Html::a('label', ['/controller/action'], ['class' => 'btn btn-primary']);
+
+echo CHtml::button('Delete', array('submit' => array('user/delete', 'id' => $model->usId),
+    'name' => 'btnDelete',
+    'confirm' => 'Are you sure you want to delete?',
+    'class' => 'btn btn-large btn-danger',
+    'style' => 'width:160px;'
+));
 ?>
